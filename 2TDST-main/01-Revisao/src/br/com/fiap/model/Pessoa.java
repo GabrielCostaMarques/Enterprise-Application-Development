@@ -1,5 +1,7 @@
 package br.com.fiap.model;
 
+import java.util.Calendar;
+
 public class Pessoa {
 
 	//Modificadores de acesso:
@@ -8,6 +10,10 @@ public class Pessoa {
 	//protected: pacote e classes filhas
 	//public: todos
 	private String nome;
+	
+	private Genero genero;
+	
+	private Calendar dataNascimento;
 	
 	//Classes: tipo de referência (padrão null)
 	//Primitivo: char, boolean (false) 
@@ -28,6 +34,14 @@ public class Pessoa {
 		this.nome = nome;
 		this.idade = idade;
 	}
+	
+	public Pessoa(String nome, int idade, Genero genero) {
+		this.nome = nome;
+		this.idade = idade;
+		this.genero = genero;
+	}
+	
+	
 
 	//Getters e Setters
 	public String getNome() {
@@ -44,6 +58,22 @@ public class Pessoa {
 
 	public void setIdade(int idade) {
 		this.idade = idade;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+
+	public Calendar getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Calendar dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 	
 }

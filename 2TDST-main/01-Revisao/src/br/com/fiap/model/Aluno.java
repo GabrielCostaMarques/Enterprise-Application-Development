@@ -11,6 +11,12 @@ public class Aluno extends Pessoa {
 		super(nome, idade);
 	}
 	
+	public Aluno(String nome, int idade, Genero genero) {
+		super(nome, idade, genero);
+	}
+	
+	
+	
 	//Sobrescrita de método: método do pai implementada na filha
 	public void descansar() {
 		System.out.println("Aluno estuda");
